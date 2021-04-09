@@ -22,6 +22,7 @@ from fractions import Fraction
 
 # Ensure this is the correct import for your particular screen
 # from waveshare_epd import epd7in5_V2 as epd_driver
+from sys import path
 path += ['/']
 from IT8951 import constants
 from IT8951.display import AutoEPDDisplay
