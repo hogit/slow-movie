@@ -267,11 +267,11 @@ width = epd.width
 height = epd.height
 
 print('System info:')
-    print('  display size: {}x{}'.format(epd.width, epd.height))
-    print('  img buffer address: {:X}'.format(epd.img_buf_address))
-    print('  firmware version: {}'.format(epd.firmware_version))
-    print('  LUT version: {}'.format(epd.lut_version))
-    print()
+print('  display size: {}x{}'.format(epd.width, epd.height))
+print('  img buffer address: {:X}'.format(epd.img_buf_address))
+print('  firmware version: {}'.format(epd.firmware_version))
+print('  LUT version: {}'.format(epd.lut_version))
+print()
 
 videoInfos = {}
 videoInfo = video_info(currentVideo)
