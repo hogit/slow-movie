@@ -17,8 +17,9 @@ import random
 import signal
 import ffmpeg
 import configargparse
-from PIL import Image, ImageEnhance
+from PIL import Image, ImageEnhance, ImageDraw, ImageFont
 from fractions import Fraction
+import argparse
 
 # Ensure this is the correct import for your particular screen
 # from waveshare_epd import epd7in5_V2 as epd_driver
@@ -26,6 +27,18 @@ from sys import path
 path += ['/']
 from IT8951 import constants
 from IT8951.display import AutoEPDDisplay
+
+def parse_args():
+    p = argparse.ArgumentParser(description='Test EPD functionality')
+    p.add_argument('-v', '--virtual', action='store_true',
+                   help='display using a Tkinter window instead of the '
+                        'actual e-paper device (for testing without a '
+                        'physical device)')
+    p.add_argument('-r', '--rotate', default=None, choices=['CW', 'CCW', 'flip'],
+                   help='run the tests with the display rotated by the specified value')
+    return p.parse_args()
+
+args = parse_args()
 
 print('Initializing EPD...')
 
