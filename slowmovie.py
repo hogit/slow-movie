@@ -324,7 +324,7 @@ while True:
     #epd.init()
     print('Clearing display...')
     # clearing image to white
-    display.frame_buf.paste(0xFF, box=(0, 0, display.width, display.height))
+    display.clear()
 
     if args.random_frames:
         currentFrame = random.randint(0, videoInfo["frame_count"])
