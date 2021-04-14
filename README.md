@@ -1,17 +1,18 @@
-## Mashup of https://github.com/qubist/SlowMovie and https://github.com/GregDMeyer/IT8951
+## Mashup of https://github.com/TomWhitwell/SlowMovie and https://github.com/GregDMeyer/IT8951
 
-Why? The larger Waveshare e-paper screens with the IT8951 controller are not included in the Waveshare epd library (epd7in5_V2) that https://github.com/qubist/SlowMovie imports.
+Why? The larger Waveshare e-paper screens with the IT8951 controller are not included in the Waveshare epd library (epd7in5_V2) that https://github.com/TomWhitwell/SlowMovie imports.
 
 ---
 
-## First follow the general setup from https://github.com/qubist/SlowMovie
+## First follow the general setup from https://github.com/TomWhitwell/SlowMovie
 
-SlowMovie requires [python3](https://www.python.org/). It uses [ffmpeg](https://ffmpeg.org/) via [ffmpeg-python](https://pypi.org/project/ffmpeg-python/) for video processing, and [Pillow](https://python-pillow.org/) for image processing.
+SlowMovie requires [Python 3](https://www.python.org). It uses [FFmpeg](https://ffmpeg.org) via [ffmpeg-python](https://github.com/kkroening/ffmpeg-python) for video processing, and [Pillow](https://python-pillow.org) for image processing. [ConfigArgParse](https://github.com/bw2/ConfigArgParse) is used for configuration and argument handling.
 
 ```
 sudo apt install ffmpeg
-pip3 install ffmpeg-python
-pip3 install pillow
+sudo pip3 install ffmpeg-python
+sudo pip3 install pillow
+sudo pip3 install ConfigArgParse
 ```
 
 ---
