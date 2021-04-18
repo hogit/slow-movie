@@ -310,7 +310,8 @@ while True:
     # Note the time when starting to display so later we can sleep for the delay value minus how long this takes
     timeStart = time.perf_counter()
     #epd.init()
-    print('Clearing display...')
+    if not args.service:
+        print(f'Clearing display...')
     # clearing image to white
     display.clear()
 
