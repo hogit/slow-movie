@@ -378,6 +378,9 @@ while True:
             log.write(str(currentFrame))
 
     #epd.sleep()
+    if not args.service:
+        print(f'Sleeping display...')
+    display.epd.sleep()
 
     # Adjust sleep delay to account for the time since we started updating this frame.
     timeDiff = time.perf_counter() - timeStart
